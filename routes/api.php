@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 foreach (scandir($path = app_path('Http/Module')) as $dir) {
-    if (file_exists($filepath = "{$path}/{$dir}/Presentation/routes/api.php")) {
+    if (file_exists($filepath = "{$path}/{$dir}/Presentation/api.php")) {
         require $filepath;
     }
 }
